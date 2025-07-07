@@ -25,7 +25,7 @@ import com.example.caffiene_app.ui.theme.SemiTransparentWhite
 import com.example.caffiene_app.ui.theme.UrbanistFont
 
 @Composable
-fun CustomizedButton(
+fun CaffeineButton(
     label: String,
     icon: Int,
     modifier: Modifier = Modifier,
@@ -63,7 +63,7 @@ fun CustomizedButton(
 @Composable
 private fun CustomizedButtonPreview() {
     Column {
-        CustomizedButton(
+        CaffeineButton(
             label = "continue",
             icon = R.drawable.ic_arrow,
         )
@@ -73,7 +73,7 @@ private fun CustomizedButtonPreview() {
 @Preview(showBackground = true)
 @Composable
 private fun CustomizedButtonPreview1() {
-    CustomizedButton(
+    CaffeineButton(
         label = "Take snack",
         icon = R.drawable.ic_arrow,
     )
@@ -82,7 +82,7 @@ private fun CustomizedButtonPreview1() {
 @Preview(showBackground = true)
 @Composable
 private fun CustomizedButtonPreview2() {
-    CustomizedButton(
+    CaffeineButton(
         label = "Thank you",
         icon = R.drawable.ic_arrow,
     )
@@ -91,7 +91,7 @@ private fun CustomizedButtonPreview2() {
 @Preview(showBackground = true)
 @Composable
 private fun CustomizedButtonPreview3() {
-    CustomizedButton(
+    CaffeineButton(
         label = "bring my coffee",
         icon = R.drawable.ic_coffee_mag,
         modifier = Modifier.padding(vertical = 16.dp)
