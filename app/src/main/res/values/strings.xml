@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Caffiene-App</string>
+    <string name="app_name">Caffeine-App</string>
+    <string name="slogan">Hocus\nPocus\nI Need Coffee\nto Focus</string>
 </resources>
