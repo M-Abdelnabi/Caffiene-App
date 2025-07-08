@@ -1,9 +1,7 @@
 package com.example.caffiene_app.presentation.screens.home_screen
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -30,32 +28,31 @@ fun HomeScreen(
             .fillMaxSize()
             .background(Color.White)
     ) {
-        Row(
+        HomeTopBar(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = 16.dp),
-            horizontalArrangement = Arrangement.SpaceBetween
-        ) {
-            HomeTopBar()
-        }
+        )
+
         CaffeineSlogan(
             modifier = Modifier
                 .align(Alignment.CenterHorizontally)
-                .padding(top = 26.dp)
+                .padding(top = 30.dp)
         )
         HomeAnimatedGhost(
             modifier = Modifier
                 .align(Alignment.CenterHorizontally)
-                .padding(top = 33.dp)
+                .padding(top = 38.dp)
         )
         CaffeineButton(
             label = "bring my coffee",
             icon = R.drawable.ic_coffee_mag,
             modifier = Modifier
-                .padding(top = 60.dp, bottom = 50.dp)
+                .padding(top = 120.dp, bottom = 50.dp)
                 .align(Alignment.CenterHorizontally),
-            onClick = { viewModel.onButtonClick() }
-        )
+            onClick = { viewModel.onButtonClick() },
+
+            )
     }
 }
 

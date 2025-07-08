@@ -6,7 +6,7 @@ import androidx.navigation.navigation
 import com.example.caffiene_app.presentation.screens.CoffeSizeScreen
 import com.example.caffiene_app.presentation.screens.CoffeePreparationScreen
 import com.example.caffiene_app.presentation.screens.CoffeeReadyScreen
-import com.example.caffiene_app.presentation.screens.CoffeeTypeScreen
+import com.example.caffiene_app.presentation.screens.coffee_type_screen.CoffeeTypeScreen
 import com.example.caffiene_app.presentation.screens.EndScreen
 import com.example.caffiene_app.presentation.screens.home_screen.HomeScreen
 import com.example.caffiene_app.presentation.screens.SnackPickerScreen

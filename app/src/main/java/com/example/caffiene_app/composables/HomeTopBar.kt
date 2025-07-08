@@ -24,13 +24,13 @@ fun HomeTopBar(
     modifier: Modifier = Modifier
 ) {
     Row(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
             .padding(16.dp),
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
         Box(
-            modifier = modifier
+            modifier = Modifier
                 .size(48.dp, 48.dp)
                 .clip(CircleShape)
         ) {
@@ -41,7 +41,7 @@ fun HomeTopBar(
             )
         }
         Box(
-            modifier = modifier
+            modifier = Modifier
                 .size(48.dp, 48.dp)
                 .clip(CircleShape)
                 .background(LightGrayBackground)

@@ -30,7 +30,8 @@ import kotlin.math.absoluteValue as absoluteValue1
 
 @Composable
 fun CoffeeHorizontalPager(
-    items: List<Pair<Int, String>>
+    items: List<Pair<Int, String>>,
+    onItemSelected: (Int) -> Unit ={}
 ) {
     val pagerState = rememberPagerState(initialPage = 0, pageCount = { items.size })
 

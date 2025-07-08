@@ -32,7 +32,7 @@ fun CaffeineButton(
     onClick: () -> Unit = {},
 ) {
     Row(
-        modifier = Modifier
+        modifier = modifier
             .height(56.dp)
             .clip(RoundedCornerShape(100.dp))
             .background(Charcoal)
