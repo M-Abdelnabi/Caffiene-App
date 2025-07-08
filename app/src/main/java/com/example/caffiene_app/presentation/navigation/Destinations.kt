@@ -3,7 +3,7 @@ package com.example.caffiene_app.presentation.navigation
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
-import com.example.caffiene_app.presentation.screens.CoffeePreparationScreen
+import com.example.caffiene_app.presentation.screens.coffee_preparation_screen.CoffeePreparationScreen
 import com.example.caffiene_app.presentation.screens.CoffeeReadyScreen
 import com.example.caffiene_app.presentation.screens.coffee_size_screen.CoffeeSizeScreen
 import com.example.caffiene_app.presentation.screens.coffee_type_screen.CoffeeTypeScreen
