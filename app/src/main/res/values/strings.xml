@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">Caffiene-App</string>
+    <string name="app_name">Caffeine-App</string>
+    <string name="slogan">Hocus\nPocus\nI Need Coffee\nto Focus</string>
+    <string name="good_morning">Good Morning</string>
+    <string name="what_would_you_like_to_drink_today">What would you like to drink today?</string>
+    <string name="your_coffee_will_be_finish_in">Your coffee will be finish in</string>
+    <string name="ff">FF</string>
+    <string name="co">CO</string>
+    <string name="ee">EE</string>
+    <string name="your_coffee_is_ready_enjoy">Your coffee is ready,\n Enjoy</string>
+    <string name="take_away">Take Away</string>
+    <string name="take_your_snack">Take your snack</string>
+    <string name="almost_done">Almost Done</string>
 </resources>
