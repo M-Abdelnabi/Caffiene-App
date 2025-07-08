@@ -2,7 +2,6 @@ package com.example.caffiene_app.presentation.screens.coffee_size_screen
 
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -19,7 +18,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -54,23 +52,22 @@ fun CoffeeSizeScreen(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(Color.White)
     ) {
         TopBarItem(
             uiState.type,
             onClickBack = { viewModel.onBackClick() },
             modifier = Modifier
                 .padding(horizontal = 16.dp)
-                .padding(bottom = 66.dp, top = 24.dp)
+                .padding(bottom = 32.dp, top = 24.dp)
                 .align(Alignment.CenterHorizontally)
         )
 
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(341.dp)
+                .height(400.dp)
                 .align(Alignment.CenterHorizontally)
-                .padding(top = 60.dp, bottom = 48.dp)
+                .padding(top = 60.dp, bottom = 36.dp)
         ) {
             Image(
                 painter = painterResource(id = R.drawable.ic_starbuks),
@@ -85,7 +82,7 @@ fun CoffeeSizeScreen(
                 contentDescription = "Logo",
                 modifier = Modifier
                     .align(Alignment.Center)
-                    .size(50.dp)
+                    .size(70.dp)
             )
             val ml by remember {
                 derivedStateOf {
@@ -127,7 +124,7 @@ fun CoffeeSizeScreen(
             onClick = { viewModel.onButtonClick() },
             modifier = Modifier
                 .align(Alignment.CenterHorizontally)
-                .padding(top = 100.dp)
+                .padding(top = 100.dp, bottom = 50.dp)
         )
     }
 }
