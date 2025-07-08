@@ -34,11 +34,11 @@ fun AnimatedWaveProgressBar(
         while (true) {
             animatedWidth.animateTo(
                 targetValue = screenWidth.value,
-                animationSpec = tween(1600, easing = LinearEasing)
+                animationSpec = tween(1700, easing = LinearEasing)
             )
             animatedWidth.animateTo(
                 targetValue = 60f,
-                animationSpec = tween(1600, easing = LinearEasing)
+                animationSpec = tween(1700, easing = LinearEasing)
             )
         }
     }

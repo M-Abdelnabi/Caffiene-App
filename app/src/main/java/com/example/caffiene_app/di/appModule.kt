@@ -1,6 +1,7 @@
 package com.example.caffiene_app.di
 
 import androidx.lifecycle.SavedStateHandle
+import com.example.caffiene_app.presentation.screens.snack_picker_screen.SnackPickerViewModel
 import com.example.caffiene_app.presentation.navigation.Destinations
 import com.example.caffiene_app.presentation.navigation.Navigator
 import com.example.caffiene_app.presentation.navigation.NavigatorImpl
@@ -18,6 +19,7 @@ val appModule = module {
     viewModel { (handle: SavedStateHandle) -> CoffeeSizeViewModel(handle) }
     viewModel { CoffeePreparationViewModel() }
     viewModel { CoffeeReadyViewModel() }
+    viewModel { SnackPickerViewModel() }
 
     single<Navigator> { NavigatorImpl(startGraph = Destinations.CaffeineGraph) }
 }

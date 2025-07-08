@@ -37,7 +37,7 @@ fun CoffeePreparationScreen(
     viewModel: CoffeePreparationViewModel = koinViewModel()
 ) {
     LaunchedEffect(Unit) {
-        delay(4000)
+        delay(2500)
         viewModel.onFinishClick()
     }
 
@@ -100,7 +100,7 @@ fun CoffeePreparationScreen(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Text(
-                    text = "Almost Done",
+                    text = stringResource(R.string.almost_done),
                     style = TextStyle(
                         fontSize = 22.sp,
                         fontWeight = FontWeight.Bold,
@@ -120,7 +120,7 @@ fun CoffeePreparationScreen(
                     horizontalArrangement = Arrangement.Center,
                 ) {
                     Text(
-                        text = stringResource(R.string.ff),
+                        text = stringResource(R.string.co),
                         fontFamily = sniglet,
                         color = DeepBrown,
                         fontSize = 32.sp,
@@ -134,7 +134,7 @@ fun CoffeePreparationScreen(
                             .align(Alignment.CenterVertically)
                     )
                     Text(
-                        text = stringResource(R.string.co),
+                        text = stringResource(R.string.ff),
                         fontFamily = sniglet,
                         color = DeepBrown,
                         fontSize = 32.sp,

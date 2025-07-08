@@ -9,7 +9,7 @@ import com.example.caffiene_app.presentation.screens.coffee_size_screen.CoffeeSi
 import com.example.caffiene_app.presentation.screens.coffee_type_screen.CoffeeTypeScreen
 import com.example.caffiene_app.presentation.screens.EndScreen
 import com.example.caffiene_app.presentation.screens.home_screen.HomeScreen
-import com.example.caffiene_app.presentation.screens.SnackPickerScreen
+import com.example.caffiene_app.presentation.screens.snack_picker_screen.SnackPickerScreen
 import kotlinx.serialization.Serializable
 
 sealed interface Destinations : Graph {
