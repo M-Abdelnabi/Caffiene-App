@@ -34,11 +34,11 @@ fun AnimatedWaveProgressBar(
         while (true) {
             animatedWidth.animateTo(
                 targetValue = screenWidth.value,
-                animationSpec = tween(800, easing = LinearEasing)
+                animationSpec = tween(1600, easing = LinearEasing)
             )
             animatedWidth.animateTo(
                 targetValue = 60f,
-                animationSpec = tween(800, easing = LinearEasing)
+                animationSpec = tween(1600, easing = LinearEasing)
             )
         }
     }
@@ -62,12 +62,11 @@ fun AnimatedWaveProgressBar(
             val controlPoint2Y = centerY + waveHeight
 
             val endX = startX + waveLength
-            val endY = centerY
 
             path.cubicTo(
                 controlPoint1X, controlPoint1Y,
                 controlPoint2X, controlPoint2Y,
-                endX, endY
+                endX, centerY
             )
 
             startX += waveLength
@@ -84,6 +83,6 @@ fun AnimatedWaveProgressBar(
 
 @Preview(showBackground = true)
 @Composable
-private fun Preview() {
+private fun AnimatedWaveProgressBarPreview() {
     AnimatedWaveProgressBar()
 }
