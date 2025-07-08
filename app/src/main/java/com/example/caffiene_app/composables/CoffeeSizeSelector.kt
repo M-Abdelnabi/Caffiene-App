@@ -28,11 +28,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.caffiene_app.ui.theme.Charcoal
 import com.example.caffiene_app.ui.theme.DeepBrown
+import com.example.caffiene_app.ui.theme.LightGrayBackground
 import com.example.caffiene_app.ui.theme.SemiTransparentWhite
 import com.example.caffiene_app.ui.theme.UrbanistFont
 
 @Composable
-fun CoffeSizeBicker(
+fun CoffeeSizeSelector(
     selectedSize: CupSize,
     onSizeSelected: (CupSize) -> Unit,
     modifier: Modifier = Modifier
@@ -44,7 +45,7 @@ fun CoffeSizeBicker(
             .width(156.dp)
             .height(56.dp)
             .clip(RoundedCornerShape(100))
-            .background(Color.White)
+            .background(LightGrayBackground)
             .padding(horizontal = 12.dp)
     ) {
         Row(
@@ -107,10 +108,10 @@ enum class CupSize(val label: String) {
 
 @Preview
 @Composable
-fun SizeSwitchPreview() {
+fun CoffeeSizeSelectorPreview() {
     var selected by remember { mutableStateOf(CupSize.Medium) }
 
-    CoffeSizeBicker(
+    CoffeeSizeSelector(
         selectedSize = selected,
         onSizeSelected = { selected = it },
         modifier = Modifier.padding(16.dp)
