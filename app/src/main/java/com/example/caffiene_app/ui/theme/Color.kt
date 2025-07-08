@@ -20,4 +20,6 @@ val DarkChocolate = Color(0xFF291710)
 val MidnightBlack = Color(0xFF030004)
 val Charcoal = Color(0xFF1F1F1F)
 val SemiTransparentWhite = Color(0xDEFFFFFF)
+val TransparentWhite = Color(0xFFFFFFFF)
+
 
