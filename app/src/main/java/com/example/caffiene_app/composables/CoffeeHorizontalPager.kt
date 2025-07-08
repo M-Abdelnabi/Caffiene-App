@@ -45,6 +45,7 @@ fun CoffeeHorizontalPager(
             ((pagerState.currentPage - page) + pagerState.currentPageOffsetFraction).absoluteValue1
         val scale = lerp(0.80f, 1f, 1f - pageOffset.coerceIn(0f, 1f))
         val offsetY = lerp(30.dp, 0.dp, 1f - pageOffset.coerceIn(0f, 1f))
+        onItemSelected(pagerState.currentPage)
 
         Column(
             modifier = Modifier

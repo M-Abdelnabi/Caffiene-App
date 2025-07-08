@@ -10,7 +10,6 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -33,6 +32,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.caffiene_app.R
 import com.example.caffiene_app.ui.theme.Charcoal
 import com.example.caffiene_app.ui.theme.DeepBrown
@@ -44,7 +44,8 @@ import kotlinx.coroutines.delay
 @Composable
 fun CaffeineBeansAmountSelector(
     modifier: Modifier = Modifier,
-    onAmountChanged: (CaffeineAmount) -> Unit
+    selectedAmount: String = "",
+    onAmountChanged: (String) -> Unit ={}
 ) {
     var selected by remember { mutableStateOf(CaffeineAmount.MEDIUM) }
     var pendingSelected by remember { mutableStateOf<CaffeineAmount?>(null) }
@@ -61,24 +62,28 @@ fun CaffeineBeansAmountSelector(
     val x by remember(selected) { mutableStateOf(xPositions[selected] ?: 0.dp) }
 
     Column(
-        modifier = modifier.width(152.dp)
+        modifier = modifier.width(152.dp),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Box(
             modifier = modifier
                 .width(152.dp)
-                .height(56.dp)
+                .height(60.dp)
                 .clip(RoundedCornerShape(100.dp))
-                .background(LightGrayBackground)
+                .background(LightGrayBackground),
+            contentAlignment = Alignment.Center
         ) {
             Row(
                 Modifier.fillMaxSize(),
                 horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
             ) {
                 CaffeineAmount.entries.forEach { level ->
                     Box(
                         Modifier
-                            .fillMaxHeight()
-                            .width(50.dp)
+                            .size(50.dp)
+                            .clip(CircleShape)
                             .clickable {
                                 if (level != selected) {
                                     visible = false
@@ -91,8 +96,8 @@ fun CaffeineBeansAmountSelector(
 
             androidx.compose.animation.AnimatedVisibility(
                 visible = visible,
-                enter = fadeIn(tween(200)),
-                exit = fadeOut(tween(200)),
+                enter = fadeIn(tween(2000)),
+                exit = fadeOut(tween(2000)),
                 modifier = Modifier
                     .align(Alignment.CenterStart)
                     .offset(x = x)
@@ -117,21 +122,23 @@ fun CaffeineBeansAmountSelector(
                     selected = pendingSelected!!
                     pendingSelected = null
                     visible = true
-                    onAmountChanged(selected)
+                    onAmountChanged(selected.toString())
                 }
             }
         }
 
         Row(
             modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceBetween
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
         ) {
             CaffeineAmount.entries.forEach { level ->
                 Text(
                     text = level.displayName,
                     fontFamily = UrbanistFont,
                     color = Charcoal.copy(alpha = 0.6f),
-                    fontWeight = FontWeight.Medium
+                    fontWeight = FontWeight.Medium,
+                    fontSize = 10.sp
                 )
             }
         }
