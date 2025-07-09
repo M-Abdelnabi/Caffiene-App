@@ -15,6 +15,8 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -39,6 +41,8 @@ fun EndScreen(
     modifier: Modifier = Modifier,
     viewModel: EndScreenViewModel = koinViewModel()
 ) {
+    val uiState by viewModel.uiState.collectAsState()
+
     Column(
         modifier = modifier
             .fillMaxSize()
@@ -91,7 +95,7 @@ fun EndScreen(
         }
 
         Image(
-            painter = painterResource(R.drawable.cup_cake),
+            painter = painterResource(uiState.snackImageResource),
             contentDescription = "",
             modifier = Modifier
                 .fillMaxWidth()
@@ -125,7 +129,7 @@ fun EndScreen(
             },
             modifier = Modifier
                 .align(Alignment.CenterHorizontally)
-                .padding(top = 162.dp)
+                .padding(top = 220.dp)
         )
     }
 }

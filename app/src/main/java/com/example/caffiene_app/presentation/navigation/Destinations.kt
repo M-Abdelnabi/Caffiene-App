@@ -36,7 +36,7 @@ sealed interface Destinations : Graph {
     data object SnackPicker : Destination
 
     @Serializable
-    data object EndScreen : Destination
+    data class EndScreen(val snack: Int) : Destination
 }
 
 fun NavGraphBuilder.buildCaffeineNavGraph() {

@@ -48,7 +48,7 @@ fun HomeScreen(
             label = "bring my coffee",
             icon = R.drawable.ic_coffee_mag,
             modifier = Modifier
-                .padding(top = 120.dp, bottom = 50.dp)
+                .padding(top = 100.dp, bottom = 50.dp)
                 .align(Alignment.CenterHorizontally),
             onClick = { viewModel.onButtonClick() },
 

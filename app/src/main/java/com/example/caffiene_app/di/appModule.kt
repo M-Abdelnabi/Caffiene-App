@@ -21,7 +21,7 @@ val appModule = module {
     viewModel { CoffeePreparationViewModel() }
     viewModel { CoffeeReadyViewModel() }
     viewModel { SnackPickerViewModel() }
-    viewModel { EndScreenViewModel() }
+    viewModel { (handle: SavedStateHandle) -> EndScreenViewModel(handle) }
 
 
     single<Navigator> { NavigatorImpl(startGraph = Destinations.CaffeineGraph) }
