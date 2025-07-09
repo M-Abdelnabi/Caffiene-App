@@ -7,7 +7,7 @@ import com.example.caffiene_app.presentation.screens.coffee_preparation_screen.C
 import com.example.caffiene_app.presentation.screens.coffee_ready_screen.CoffeeReadyScreen
 import com.example.caffiene_app.presentation.screens.coffee_size_screen.CoffeeSizeScreen
 import com.example.caffiene_app.presentation.screens.coffee_type_screen.CoffeeTypeScreen
-import com.example.caffiene_app.presentation.screens.EndScreen
+import com.example.caffiene_app.presentation.screens.end_screen.EndScreen
 import com.example.caffiene_app.presentation.screens.home_screen.HomeScreen
 import com.example.caffiene_app.presentation.screens.snack_picker_screen.SnackPickerScreen
 import kotlinx.serialization.Serializable
@@ -36,7 +36,7 @@ sealed interface Destinations : Graph {
     data object SnackPicker : Destination
 
     @Serializable
-    data object EndScreen : Destination
+    data class EndScreen(val snack: Int) : Destination
 }
 
 fun NavGraphBuilder.buildCaffeineNavGraph() {

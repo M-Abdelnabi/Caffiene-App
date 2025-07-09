@@ -84,7 +84,8 @@ fun SnackPickerScreen(
                     .fillMaxWidth()
                     .padding(top = 12.dp)
                     .offset(x = (-70).dp),
-                onClick = { viewModel.onItemClick() }
+                onClick = { index ->
+                    viewModel.onItemClick(imageList[index]) }
             )
         }
     }
